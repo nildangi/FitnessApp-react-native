@@ -3,16 +3,17 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import LoginScreen from './Apps/Screens/LoginScreen';
 import { NavigationContainer } from '@react-navigation/native';
-import TabNavigation from './Apps/Navigations/TabNavigation';
+import TabNavigation  from './Apps/Navigations/TabNavigation';
+import ProfileScreen from './Apps/Screens/ProfileScreen';
 
 // create a component
 const App = () => {
   return (
-    <View style={styles.container}>
-      {/* <LoginScreen /> */}
-      <NavigationContainer>
+    <View>
+      <LoginScreen />
+      {/* <NavigationContainer>
         <TabNavigation />
-      </NavigationContainer>
+      </NavigationContainer> */}
     </View>
   );
 };
@@ -20,9 +21,8 @@ const App = () => {
 // define your styles
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    // flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
   },
 });
 

@@ -2,9 +2,10 @@ import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native'
 import React from 'react'
 import Color from '../Utils/Color'
 import HomeScreen from './HomeScreen'
+import MyCourseScreen from './MyCourseScreen'
 
 
-const LoginScreen = () => {
+const LoginScreen = ({navigation}) => {
     return (
         <View>
             <Image source={require('../../src/assets/images/rocket.jpg')}
@@ -23,12 +24,12 @@ const LoginScreen = () => {
                     color: Color.GRAY
                 }}>Learn Programming to Build Real Lite Project</Text>
                 {/*Sign In button */}
-                <TouchableOpacity onPress={()=>navigation.navigate(HomeScreen())} style={styles.button}>
+                <TouchableOpacity onPress={() => navigation.navigate('MyCourseScreen')} style={styles.button}>
                     <Text style={{
                         textAlign: 'center',
                         color: Color.WHITE, fontSize: 18
                     }}>Sign In</Text>
-                </TouchableOpacity>
+                </TouchableOpacity>         
                 <TouchableOpacity onPress={()=>console.warn("Hello")}>
                     <Text style={{ marginTop: 10, color: Color.PRIMARY, textAlign: 'center', fontSize: 16 }}>Create New Account</Text>
                 </TouchableOpacity>

@@ -6,13 +6,14 @@ import MyCourseScreen from '../Screens/MyCourseScreen';
 import HomeScreen from '../Screens/HomeScreen';
 
 const Tab = createBottomTabNavigator();
-export default function TabNavigation() {
-return (
-    <Tab.Navigator>
-      <Tab.Screen name='Home' component={HomeScreen} />
-      <Tab.Screen name='MyCourse' component={MyCourseScreen} />
-      <Tab.Screen name='Profile' component={ProfileScreen} />
-    </Tab.Navigator>
-  );
-}
 
+export default function TabNavigation() {
+    return (
+            <Tab.Navigator>
+                <Tab.Screen name='Home' component={HomeScreen} />
+                <Tab.Screen name='MyCourse' component={MyCourseScreen} />
+                <Tab.Screen name='Profile' component={ProfileScreen} />
+                <Tab.Screen name='Login' component={LoginScreen} />
+            </Tab.Navigator>
+    );
+}
