@@ -1,6 +1,7 @@
-import { View, Text, Image } from 'react-native'
+import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native'
 import React from 'react'
 import Color from '../Utils/Color'
+import HomeScreen from './HomeScreen'
 
 
 const LoginScreen = () => {
@@ -13,17 +14,36 @@ const LoginScreen = () => {
                     objectFit: 'cover'
                 }}
             />
-            <View style={{padding:20}}>
-                <Text style={{fontSize:45,fontWeight:'bold'}}>Welcom To <Text style={{color:Color.PRIMARY}} >CodeBox</Text></Text>
-                <Text style={{fontSize:20,
-                marginTop:7,
-                color:Color.PRIMARY}}>Learn Programming to Build Real Lite Project</Text>
-            </View>
-            <View>
-                <Text>Sign In</Text>
+            <View style={{ padding: 20 }}>
+                <Text style={{ fontSize: 45, fontWeight: '900' }}>Welcome To
+                    <Text style={{ color: Color.PRIMARY }} > CodeBox</Text></Text>
+                <Text style={{
+                    fontSize: 20,
+                    marginTop: 7,
+                    color: Color.GRAY
+                }}>Learn Programming to Build Real Lite Project</Text>
+                {/*Sign In button */}
+                <TouchableOpacity onPress={()=>navigation.navigate(HomeScreen())} style={styles.button}>
+                    <Text style={{
+                        textAlign: 'center',
+                        color: Color.WHITE, fontSize: 18
+                    }}>Sign In</Text>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={()=>console.warn("Hello")}>
+                    <Text style={{ marginTop: 10, color: Color.PRIMARY, textAlign: 'center', fontSize: 16 }}>Create New Account</Text>
+                </TouchableOpacity>
             </View>
         </View>
     )
 }
+const styles = StyleSheet.create({
+    button: {
+        padding: 16,
+        backgroundColor: Color.PRIMARY,
+        borderRadius: 99,
+        marginTop: 60
+    }
+})
+
 
 export default LoginScreen

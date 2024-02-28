@@ -2,13 +2,17 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import LoginScreen from './Apps/Screens/LoginScreen';
+import { NavigationContainer } from '@react-navigation/native';
+import TabNavigation from './Apps/Navigations/TabNavigation';
 
 // create a component
 const App = () => {
   return (
-    <View>
-      <LoginScreen />
-      {/* <Text>Fitness App </Text> */}
+    <View style={styles.container}>
+      {/* <LoginScreen /> */}
+      <NavigationContainer>
+        <TabNavigation />
+      </NavigationContainer>
     </View>
   );
 };
@@ -19,7 +23,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    // backgroundColor: '#2c3e50',
   },
 });
 
