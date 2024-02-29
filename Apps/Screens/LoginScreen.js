@@ -3,6 +3,8 @@ import React from 'react'
 import Color from '../Utils/Color'
 import HomeScreen from './HomeScreen'
 import MyCourseScreen from './MyCourseScreen'
+import TabNavigation from '../Navigations/TabNavigation'
+
 
 
 const LoginScreen = ({navigation}) => {
@@ -24,7 +26,7 @@ const LoginScreen = ({navigation}) => {
                     color: Color.GRAY
                 }}>Learn Programming to Build Real Lite Project</Text>
                 {/*Sign In button */}
-                <TouchableOpacity onPress={() => navigation.navigate('MyCourseScreen')} style={styles.button}>
+                <TouchableOpacity onPress={() => navigation.navigate('TabNavigation')} style={styles.button}>
                     <Text style={{
                         textAlign: 'center',
                         color: Color.WHITE, fontSize: 18

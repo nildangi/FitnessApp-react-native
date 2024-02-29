@@ -9,22 +9,13 @@ import ProfileScreen from './Apps/Screens/ProfileScreen';
 // create a component
 const App = () => {
   return (
-    <View>
-      <LoginScreen />
-      {/* <NavigationContainer>
+    // <LoginScreen />
+      <NavigationContainer>
         <TabNavigation />
-      </NavigationContainer> */}
-    </View>
+      </NavigationContainer>
   );
 };
 
-// define your styles
-const styles = StyleSheet.create({
-  container: {
-    // flex: 1,
-    justifyContent: 'center',
-  },
-});
 
 //make this component available to the app
 export default App;

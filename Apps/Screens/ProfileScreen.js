@@ -17,14 +17,15 @@ import { View, Text } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeScreen from './HomeScreen';
 import MyCourseScreen from './MyCourseScreen';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
+
 
 const Tab = createBottomTabNavigator();
 const ProfileScreen = () => {
     return (
         <View>
-            <Text>
-                Hello
-            </Text>
+            <Text> Hello</Text>
         </View>
     );
 }
